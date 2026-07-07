@@ -1,0 +1,8 @@
+tools:
+  - class_name: biomed.search_tool.BiomedSearchTool
+    config:
+      type: native
+      url: http://127.0.0.1:8000/retrieve
+      topk: 2
+      timeout: 30
+      max_doc_chars: 900

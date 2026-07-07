@@ -1,0 +1,52 @@
+# Local environments and caches
+.venv/
+env/
+search_env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.pip-cache/
+
+# Experiment data and generated artifacts
+data/
+outputs/
+wandb/
+logs/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.parquet
+*.jsonl
+*.pkl
+*.npy
+*.npz
+*.faiss
+*.index
+
+# Large/local toolchains
+cuda*/
+
+# Secrets and local machine configuration
+*.env
+.env*
+*wandb*key*
+*secret*
+*token*
+.netrc
+.vscode/
+.idea/
+
+# Paper build byproducts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.xdv
+*.toc
