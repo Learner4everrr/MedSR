@@ -507,7 +507,7 @@ def write_main_metric_tables(metrics: pd.DataFrame) -> None:
     lines = [
         r"\begin{table}[!htbp]",
         r"\centering",
-        r"\caption{\textbf{Main experimental results across all three medical QA benchmarks.} Rows are grouped by dataset and each row is one evaluated method--corpus condition. ``Search'' denotes an untrained search baseline in which retrieved passages from the named corpus are inserted into the model context without parameter updates. ``Ours'' denotes the GRPO-trained MedSR search-and-answer policy using the same corpus interface. Model blocks report accuracy, Wilson 95\% confidence interval, micro-F1, macro-F1, weighted-F1, and mean format score. Abbreviations: Text, textbooks; StatP, StatPearls; Wiki, Wikipedia; Wt, weighted-F1; Fmt, format score. Within each dataset and model block, the best value for each metric column is bolded.}\label{tab:main-results}",
+        r"\caption{\textbf{Main experimental results.} ``Search'' is untrained search prompting; ``Ours'' is the GRPO-trained MedSR policy. Model blocks report accuracy, Wilson 95\% CI, micro-F1, macro-F1, weighted-F1, and format score. Best values within each dataset and model block are bolded.}\label{tab:main-results}",
         r"\tiny",
         r"\setlength{\tabcolsep}{1.0pt}",
         r"\renewcommand{\arraystretch}{0.66}",
