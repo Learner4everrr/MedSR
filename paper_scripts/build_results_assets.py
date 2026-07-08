@@ -583,7 +583,7 @@ def write_ablation_figure(abl: pd.DataFrame) -> None:
             "axes.spines.right": False,
         }
     )
-    fig = plt.figure(figsize=(12.5, 7.4))
+    fig = plt.figure(figsize=(12.5, 6.7))
     gs = fig.add_gridspec(2, 3)
     axes = [
         fig.add_subplot(gs[0, 0]),
@@ -710,7 +710,7 @@ def write_main_result_figure(metrics: pd.DataFrame) -> None:
         }
     )
 
-    fig = plt.figure(figsize=(13.2, 11.0))
+    fig = plt.figure(figsize=(13.2, 9.8))
     gs = fig.add_gridspec(3, 2, width_ratios=[1.0, 1.0], height_ratios=[1.0, 1.0, 0.92])
     ax_gain = fig.add_subplot(gs[0, 0])
     ax_corpus = fig.add_subplot(gs[0, 1])
