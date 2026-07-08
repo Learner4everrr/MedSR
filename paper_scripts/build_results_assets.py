@@ -22,9 +22,9 @@ BASE = ROOT / "outputs/result_summaries/baselines_all_with_fewshot.tsv"
 ABL = ROOT / "outputs/ablations_pubmed_llama_pubmedqa/summary.tsv"
 
 MODEL_LABELS = {
-    "qwen25_3b": "Qwen2.5 3B",
-    "llama32_3b_instruct": "Llama 3.2 3B",
-    "deepseek_r1_qwen_15b": "DeepSeek-R1 Qwen 1.5B",
+    "qwen25_3b": "Qwen2.5-3B",
+    "llama32_3b_instruct": "Llama-3.2-3B-Instruct",
+    "deepseek_r1_qwen_15b": "DeepSeek-R1-Distill-Qwen-1.5B",
 }
 MODEL_SHORT = {
     "qwen25_3b": "Qwen",
@@ -32,9 +32,9 @@ MODEL_SHORT = {
     "deepseek_r1_qwen_15b": "DeepSeek",
 }
 FIGURE_MODEL_LABELS = {
-    "qwen25_3b": "Qwen2.5 3B",
-    "llama32_3b_instruct": "Llama 3.2 3B",
-    "deepseek_r1_qwen_15b": "DeepSeek 1.5B",
+    "qwen25_3b": "Qwen2.5-3B",
+    "llama32_3b_instruct": "Llama-3.2-3B\nInstruct",
+    "deepseek_r1_qwen_15b": "DeepSeek-R1\nQwen-1.5B",
 }
 DATASET_LABELS = {
     "medqa_usmle": "MedQA",
@@ -406,9 +406,9 @@ def dataset_metric_table_rows(metrics: pd.DataFrame, dataset_key: str) -> list[s
 def write_main_metric_tables(metrics: pd.DataFrame) -> None:
     metric_headers = ["Acc", "95\\% CI", "Micro", "Macro", "Wt", "Fmt"]
     table_model_labels = {
-        "qwen25_3b": "Qwen2.5 3B",
-        "llama32_3b_instruct": "Llama 3.2 3B",
-        "deepseek_r1_qwen_15b": "DeepSeek-R1 Qwen 1.5B",
+        "qwen25_3b": "Qwen2.5-3B",
+        "llama32_3b_instruct": "Llama-3.2-3B-Instruct",
+        "deepseek_r1_qwen_15b": "DeepSeek-R1-Distill-Qwen-1.5B",
     }
     table_corpus_labels = {
         "none": "-",
@@ -955,7 +955,7 @@ def write_main_result_figure(metrics: pd.DataFrame) -> None:
     ax_delta.set_ylabel("Mean accuracy difference (pp)")
     ax_delta.grid(axis="y", color="#d9d9d9", linewidth=0.7, alpha=0.7)
 
-    fig.subplots_adjust(left=0.075, right=0.99, top=0.975, bottom=0.05, wspace=0.30, hspace=0.34)
+    fig.subplots_adjust(left=0.115, right=0.99, top=0.975, bottom=0.05, wspace=0.30, hspace=0.34)
     fig.savefig(FIG / "fig_main_results_summary.pdf")
     fig.savefig(FIG / "fig_main_results_summary.png", dpi=300)
     plt.close(fig)
